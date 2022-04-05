@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #ac-wrapper {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, .6);
+            z-index: 1001;
+        }
+
+        #popup {
+            width: 555px;
+            height: 375px;
+            background: #FFFFFF;
+            border-radius: 25px;
+            -moz-border-radius: 25px;
+            -webkit-border-radius: 25px;
+            box-shadow: #64686e 0px 0px 3px 3px;
+            position: relative;
+            top: 150px;
+            left: 375px;
+        }
+    </style>
+    <script>
+        
+        function PopUp() {
+            document.getElementById('ac-wrapper').style.display = "block";
+        }
+        function Pop1() {
+            document.getElementById('ac-wrapper').style.display = "none";
+        }
+        window.onload = function () {
+            setInterval(function () {
+                PopUp('show');
+            }, 5000);
+        }
+        clearInterval(PopUp);
+    </script>
+    <div id="ac-wrapper">
+        <div id="popup">
+            <center>
+                <h2>Popup Content Here</h2>
+                <img src="wingreens.png" width="450">
+                <input type="submit" name="submit" value="Submit" onClick="Pop1()" />
+            </center>
+        </div>
+    </div>
+
+    <p>Page Content Here......</p>
+</body>
+
+</html>
