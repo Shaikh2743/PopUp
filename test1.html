@@ -28,7 +28,7 @@
             padding: 30px 40px;
             position: absolute;
             z-index: 999;
-            transform: translate(-50%, -50%);
+            transform: translate(-50%, 10%);
             left: 50%;
             top: 50%;
             border-radius: 8px;
@@ -69,13 +69,20 @@
         }
 
         .wing {
-            margin-bottom: 4rem;
+            margin-bottom: 50px;
         }
 
         .title {
             margin-top: -3rem;
             margin-bottom: 2rem;
         }
+
+        .redirect {
+            color: white;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
     </style>
     <div class="popup">
         <button id="close">&times;</button>
@@ -93,11 +100,11 @@
                 function open(event) {
                     document.querySelector(".popup").style.display = "block";
                 },
-                1000
+                5000
             )
         }
         // window.addEventListener("load", function () {
-            
+
         // });
 
 
